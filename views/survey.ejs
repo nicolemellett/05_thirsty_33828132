@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Survey - <%= shopName || "Our Shop" %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Customer Survey</h1>
+    <form action="/survey" method="POST">
+        <label>First Name:</label>
+        <input type="text" name="firstName" required><br><br>
+
+        <label>Surname:</label>
+        <input type="text" name="surname" required><br><br>
+
+        <label>Email Address:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label>How old are you?</label>
+        <input type="number" name="age" min="0" required><br><br>
+
+        <label>Which of the following drinks categories do you consume?</label><br>
+        <% drinksCategories.forEach(category => { %>
+            <input type="radio" name="drinkCategory" value="<%= category %>" required> <%= category %><br>
+        <% }) %>
+        <br>
+
+        <label>Are you a student?</label>
+        <input type="checkbox" name="student"><br><br>
+
+        <button type="submit">Submit Survey</button>
+    </form>
+</body>
+</html>

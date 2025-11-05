@@ -1,0 +1,78 @@
+:root {
+  --pink-bg: #ffe6ef;
+  --pink-accent: #f8a5c2;
+  --pink-dark: #d67ba7;
+  --text-color: #4a4a4a;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--pink-bg);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: var(--pink-accent);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 3px solid var(--pink-dark);
+}
+
+h1, h2, h3 {
+  color: var(--pink-dark);
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--pink-dark);
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--pink-accent);
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+  border-color: var(--pink-dark);
+  box-shadow: 0 0 5px var(--pink-accent);
+}
+
+input[type="submit"] {
+  background-color: var(--pink-accent);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--pink-dark);
+}
+
+footer {
+  margin-top: 3rem;
+  border-top: 3px solid var(--pink-dark);
+}
